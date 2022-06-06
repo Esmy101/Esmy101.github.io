@@ -1,0 +1,110 @@
+:root{
+    --dark: #94bbe9;
+    --pink: #eeaeca;
+    --light: white; 
+}
+* {
+    color: var(--light);
+    background: var(--dark);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Header*/
+h1 {
+    color: var(--pink);
+    text-align: center;
+}
+.intro {    
+    text-align: center;
+}
+
+/*Section*/
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    margin: inherit;
+}
+
+.box:hover {
+    height: 310px;
+    flex: 25.3%
+}
+
+h2{
+    color: var(--pink);
+   border: solid 2px var(--light);
+   border-radius: 5px;
+  padding: 5px;
+    top: -45px;
+   left:  2.5%;
+   right: 2.5%;
+    position: absolute;
+}
+.box {
+    border: dashed 2px var(--light);
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+    margin-top: 50px;
+    margin-left: 90px;
+    width: 300px;
+    height: 300px;
+    flex: 25%;
+    transition: all .1s ease-in;
+}
+
+/*Text inside box*/
+.first {
+    color: var(--pink);
+}
+
+.second {
+    color: var(--light);
+    background: rgb(238,174,202);
+    background: linear-gradient(0deg, rgba(238,174,202,1) 0%, rgba(195,138,163,1) 100%);
+
+}
+
+.box:hover,
+.box:hover h2 {
+    box-shadow: inset 0px 0px 8px;
+    rgba(232, 102, 236, 1), 0 0 15px
+    rgba(232, 102, 236, 1);
+} 
+
+
+/*Footer*/
+footer {
+    display: flex;
+  justify-content: center;
+  padding: 10%;
+}
+h3 {
+    color: var(--pink);
+    
+}
+
+/* On screen at is 768px or less, set background color to purple */
+@media screen and (max-width: 768px) {
+    * {
+        background-color: #bbb5dc;
+    }
+    section { 
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* On screen at is 768 or more, set header to white */
+@media screen and (max-width: 992px){
+    h1 {
+        color: var(--light)
+    }
+    section {
+        
+        flex: 33%
+    }
+}
+
